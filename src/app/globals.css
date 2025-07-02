@@ -9,4 +9,7 @@ body {
 @theme {
     --color-bck-light: #e9e9e9;
     --color-bck-dark: #030712;
+
+    --color-txt-dark: #e9e9e9;
+    --color-txt-light: #030712;
 }
