@@ -44,8 +44,13 @@ export default function Home() {
     return (
         <div className="flex-1 flex flex-col items-center justify-center text-center space-y-8">
             <h2 className="text-6xl font-bold sm:ml-8">
-                Hey, I&apos;m {name} 👋
+                Hey, I&apos;m {name}{" "}
+                <span className="text-6xl origin[70%_70%]" id="wave">
+                    👋
+                </span>
             </h2>
+
+            {/*<span className="text-6xl origin-[70%_70%]">👋</span>*/}
             <p className="text-lg max-w-xl mx-auto dark:text-gray-300 text-gray-600">
                 CS student with a love-hate relationship with semicolons and
                 life itself. Passionate about web tech, machine learning,
