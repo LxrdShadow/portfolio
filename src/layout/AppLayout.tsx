@@ -46,12 +46,7 @@ export default function AppLayout({
                     <NavLink
                         title="About me"
                         icon={<FileUser />}
-                        href="/about"
-                    />
-                    <NavLink
-                        title="Studies"
-                        icon={<GraduationCap />}
-                        href="/studies"
+                        href="/about-me"
                     />
                     <NavLink
                         title="Contact"
@@ -80,10 +75,21 @@ export default function AppLayout({
                 {/* Mobile Nav Menu */}
                 {isOpen && (
                     <div className="absolute top-full left-0 w-full bg-background-light dark:bg-background-dark flex flex-col items-center gap-4 py-4 md:hidden shadow-lg border-t">
-                        <NavLink title="Projects" icon={<LaptopMinimal />} />
-                        <NavLink title="About me" icon={<FileUser />} />
-                        <NavLink title="Studies" icon={<GraduationCap />} />
-                        <NavLink title="Contact" icon={<Contact />} />
+                        <NavLink
+                            title="Projects"
+                            icon={<LaptopMinimal />}
+                            href="/projects"
+                        />
+                        <NavLink
+                            title="About me"
+                            icon={<FileUser />}
+                            href="/about-me"
+                        />
+                        <NavLink
+                            title="Contact"
+                            icon={<Contact />}
+                            href="/contact"
+                        />
                     </div>
                 )}
             </header>
