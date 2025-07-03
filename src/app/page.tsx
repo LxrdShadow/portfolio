@@ -45,7 +45,10 @@ export default function Home() {
         <div className="flex-1 flex flex-col items-center justify-center text-center space-y-8">
             <h2 className="text-6xl font-bold sm:ml-8">
                 Hey, I&apos;m {name}{" "}
-                <span className="text-6xl origin[70%_70%]" id="wave">
+                <span
+                    className="text-6xl origin[70%_70%] select-none"
+                    id="wave"
+                >
                     👋
                 </span>
             </h2>
