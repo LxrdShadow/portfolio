@@ -16,6 +16,7 @@ import {
     ThemeAnimationType,
     useModeAnimation,
 } from "react-theme-switch-animation";
+import "@/styles/stars.css";
 
 export default function AppLayout({
     children,
@@ -34,7 +35,13 @@ export default function AppLayout({
     }, []);
     return (
         <div className="min-h-screen flex flex-col justify-between font-[family-name:var(--font-jetbrains-mono)] text-txt-light dark:text-txt-dark">
-            <header className="flex flex-col justify-between py-2 px-4 sm:px-20 md:px-32">
+            <div className="bg-animation absolute min-h-screen min-w-screen z-[-100]">
+                <div id="stars"></div>
+                <div id="stars2"></div>
+                <div id="stars3"></div>
+                <div id="stars4"></div>
+            </div>
+            <header className="flex flex-col justify-between py-2 sm:px-20 md:px-32">
                 <div className="flex justify-between px-10">
                     <h1
                         className="text-2xl text-left cursor-pointer"
