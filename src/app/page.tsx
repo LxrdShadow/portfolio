@@ -71,7 +71,7 @@ export default function Home() {
                 </a>
                 <a
                     href="/contact"
-                    className="outline-none inline-block px-6 py-2 mt-4 border border-black dark:border-white rounded hover:bg-black dark:hover:bg-white hover:text-gray-200 dark:hover:text-black transition cursor-pointer"
+                    className="outline-none inline-block px-6 py-2 mt-4 border border-txt-light dark:border-txt-dark rounded hover:bg-txt-light dark:hover:bg-txt-dark hover:text-gray-200 dark:hover:text-txt-light transition cursor-pointer"
                 >
                     Let&apos;s Connect
                 </a>
