@@ -1,6 +1,6 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 type Props = {
     title: string;
@@ -9,16 +9,14 @@ type Props = {
 };
 
 function NavLink({ title, icon, href }: Props) {
-    const router = useRouter();
-
     return (
-        <a
+        <Link
             className="hover:underline text-txt-light dark:text-txt-dark flex flex-row items-center gap-2 cursor-pointer"
-            onClick={() => router.push(href)}
+            href={href}
         >
             {icon}
             <p>{title}</p>
-        </a>
+        </Link>
     );
 }
 
