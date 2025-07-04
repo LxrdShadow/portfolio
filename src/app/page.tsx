@@ -62,7 +62,7 @@ export default function Home() {
                 life itself. Passionate about web tech, machine learning,
                 security, and doing cool stuff with code.
             </p>
-            <div className="flex gap-4">
+            <div className="grid grid-cols-2 gap-4">
                 <a
                     // href="/contact"
                     className="outline-none inline-block px-6 py-2 mt-4 bg-txt-light dark:bg-txt-dark text-txt-dark dark:text-txt-light border border-txt-light dark:border-txt-dark rounded hover:bg-txt-dark dark:hover:bg-txt-light hover:text-txt-light dark:hover:text-txt-dark transition cursor-pointer"

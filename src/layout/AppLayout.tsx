@@ -57,7 +57,7 @@ export default function AppLayout({
                                 toggleSwitchTheme();
                             }}
                         >
-                            {hasMounted && (isDarkMode ? <Moon /> : <Sun />)}
+                            {hasMounted && (isDarkMode ? <Sun /> : <Moon />)}
                         </button>
                         <button
                             className="md:hidden"
