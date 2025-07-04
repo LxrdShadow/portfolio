@@ -34,7 +34,7 @@ export default function AppLayout({
         setHasMounted(true);
     }, []);
     return (
-        <div className="min-h-screen flex flex-col justify-between font-[family-name:var(--font-jetbrains-mono)] text-txt-light dark:text-txt-dark">
+        <div className="min-h-dvh flex flex-col justify-between font-[family-name:var(--font-jetbrains-mono)] text-txt-light dark:text-txt-dark">
             <div className="bg-animation absolute min-h-screen min-w-screen z-[-100]">
                 <div id="stars"></div>
                 <div id="stars2"></div>
