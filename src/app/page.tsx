@@ -66,15 +66,15 @@ export default function Home() {
             <div className="grid grid-cols-2 gap-4">
                 <Link
                     href="/about-me"
-                    className="outline-none inline-block px-6 py-2 mt-4 bg-txt-light dark:bg-txt-dark text-txt-dark dark:text-txt-light border border-txt-light dark:border-txt-dark rounded hover:bg-txt-dark dark:hover:bg-txt-light hover:text-txt-light dark:hover:text-txt-dark transition cursor-pointer"
+                    className="flex justify-center items-center outline-none px-6 py-2 mt-4 bg-txt-light dark:bg-txt-dark text-txt-dark dark:text-txt-light border border-txt-light dark:border-txt-dark rounded hover:bg-txt-dark dark:hover:bg-txt-light hover:text-txt-light dark:hover:text-txt-dark transition cursor-pointer"
                 >
-                    My resume
+                    <p>My resume</p>
                 </Link>
                 <Link
                     href="/contact"
-                    className="outline-none inline-block px-6 py-2 mt-4 border border-black dark:border-white rounded hover:bg-black dark:hover:bg-white hover:text-gray-200 dark:hover:text-black transition cursor-pointer"
+                    className="flex justify-center items-center outline-none px-6 py-2 mt-4 border border-txt-light dark:border-txt-dark rounded hover:bg-bck-dark dark:hover:bg-bck-light hover:text-txt-dark dark:hover:text-txt-light transition cursor-pointer"
                 >
-                    Let&apos;s Connect
+                    <p>Let&apos;s Connect</p>
                 </Link>
             </div>
         </div>
