@@ -31,7 +31,7 @@ const Header = () => {
 
     return (
         <header className="flex flex-col justify-between py-2 sm:px-20 md:px-32 relative">
-            <div className="flex justify-between px-10">
+            <div className="flex justify-between px-4">
                 <h1
                     className="text-2xl text-left cursor-pointer"
                     onClick={() => router.push("/")}
