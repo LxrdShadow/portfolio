@@ -7,6 +7,7 @@ import {
     Sun,
     X,
     Menu,
+    Home,
 } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -61,6 +62,7 @@ const Header = () => {
             />
 
             <div className="hidden md:flex justify-center my-4 py-4 gap-8">
+                <NavLink title="Home" icon={<Home />} href="/" />
                 <NavLink
                     title="Projects"
                     icon={<LaptopMinimal />}

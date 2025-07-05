@@ -1,5 +1,7 @@
 import { Transition, TransitionChild } from "@headlessui/react";
 import React, { useEffect, useRef } from "react";
+import NavLink from "./NavLink";
+import { Contact, FileUser, Home, LaptopMinimal } from "lucide-react";
 
 type Props = {
     isOpen: boolean;
@@ -47,9 +49,24 @@ const ModalNavBar = ({ isOpen = true, setOpen, className = "" }: Props) => {
             >
                 <div
                     ref={selectRef}
-                    className={`scale-90 flex flex-col items-center justify-center gap-4 w-max rounded-lg bg-bck-light dark:bg-bck-dark shadow-sm px-3 py-2 border border-stone-200 dark:border-accent overflow-hidden ${className}`}
+                    className={`scale-90 flex flex-col justify-center gap-4 w-max rounded-lg bg-bck-light dark:bg-bck-dark shadow-sm p-4 border border-stone-200 dark:border-accent overflow-hidden ${className}`}
                 >
-                    Hello world
+                    <NavLink title="Home" icon={<Home />} href="/" />
+                    <NavLink
+                        title="Projects"
+                        icon={<LaptopMinimal />}
+                        href="/projects"
+                    />
+                    <NavLink
+                        title="About me"
+                        icon={<FileUser />}
+                        href="/about-me"
+                    />
+                    <NavLink
+                        title="Contact"
+                        icon={<Contact />}
+                        href="/contact"
+                    />
                 </div>
             </TransitionChild>
         </Transition>
