@@ -20,6 +20,14 @@ body {
     display: inline-block;
 }
 
+#simple-wave {
+    animation-name: simple-wave-animation;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    transform-origin: 70% 70%;
+    display: inline-block;
+}
+
 .animate-gradient-rotate {
     background-size: 200% 200%;
     animation: rotate-gradient 1s ease infinite;

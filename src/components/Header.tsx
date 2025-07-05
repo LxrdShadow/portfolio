@@ -30,7 +30,7 @@ const Header = () => {
     }, []);
 
     return (
-        <header className="flex flex-col justify-between py-2 sm:px-20 md:px-32 relative">
+        <header className="flex flex-col justify-between py-2 px-2 sm:px-20 md:px-32 relative">
             <div className="flex justify-between px-4">
                 <h1
                     className="text-2xl text-left cursor-pointer"
@@ -58,7 +58,7 @@ const Header = () => {
             <ModalNavBar
                 isOpen={isOpen}
                 setOpen={setIsOpen}
-                className="md:hidden fixed top-12 right-6 sm:right-20 z-50"
+                className="md:hidden fixed top-12 right-4 sm:right-20 z-50"
             />
 
             <div className="hidden md:flex justify-center my-4 py-4 gap-8">
