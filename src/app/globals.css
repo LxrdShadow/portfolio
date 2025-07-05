@@ -3,8 +3,8 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-    --accent-color: #05df72;
-    --accent-color-1: #00bcff;
+    --accent-color: #00bcff;
+    --accent-color-1: #05df72;
     --star-color: #00786fcc;
 }
 
