@@ -19,7 +19,7 @@ export default function AppLayout({
             </div>
             <Header />
             <main>
-                <section className="grid grid-rows-1 items-center justify-items-center h-full px-8 gap-16 sm:px-20 lg:px-40 font-[family-name:var(--font-jetbrains-mono)] dark:text-white">
+                <section className="grid grid-rows-1 items-center justify-items-center h-full px-8 gap-16 sm:px-20 lg:px-40 font-[family-name:var(--font-jetbrains-mono)] dark:text-white overflow-visible">
                     <AnimatePresence mode="wait">{children}</AnimatePresence>
                 </section>
             </main>
