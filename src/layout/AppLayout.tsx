@@ -3,7 +3,6 @@ import { AnimatePresence } from "framer-motion";
 
 import Header from "@/components/Header";
 import "@/styles/stars.css";
-import { useEffect, useState } from "react";
 
 export default function AppLayout({
     children,
