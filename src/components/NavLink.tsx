@@ -11,7 +11,7 @@ type Props = {
 function NavLink({ title, icon, href }: Props) {
     return (
         <Link
-            className="hover:underline text-txt-light dark:text-txt-dark flex flex-row items-center gap-2 cursor-pointer"
+            className="hover:underline text-txt-light dark:text-txt-dark flex items-center gap-2 cursor-pointer"
             href={href}
         >
             {icon}
