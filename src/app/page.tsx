@@ -49,10 +49,7 @@ export default function Home() {
                 <span className="animate-gradient-rotate text-transparent bg-clip-text bg-gradient-to-tr from-accent-1 to-accent">
                     {name}
                 </span>{" "}
-                <span
-                    className="text-6xl origin[70%_70%] select-none"
-                    id="wave"
-                >
+                <span className="text-6xl animate-[simple-wave-animation_3s_infinite] md:animate-[wave-animation_3.3s_infinite] origin-[70%_70%] inline-block select-none">
                     👋
                 </span>
             </h2>
