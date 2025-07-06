@@ -1,5 +1,9 @@
+"use client";
+
+import PageAnimator from "@/layout/PageAnimator";
+
 const Contact = () => {
-    return <div>Contacts</div>;
+    return <PageAnimator>Contact</PageAnimator>;
 };
 
 export default Contact;

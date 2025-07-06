@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import PageAnimator from "@/layout/PageAnimator";
 
 export default function Home() {
     const [name, setName] = useState("Shadow");
@@ -43,7 +44,7 @@ export default function Home() {
     }, []);
 
     return (
-        <div className="flex-1 flex flex-col items-center justify-center text-center space-y-8">
+        <PageAnimator>
             <h2 className="text-6xl font-bold sm:ml-8">
                 Hey, I&apos;m{" "}
                 <span className="animate-gradient-rotate text-transparent bg-clip-text bg-gradient-to-tr from-accent-1 to-accent">
@@ -74,6 +75,6 @@ export default function Home() {
                     <p>Let&apos;s Connect</p>
                 </Link>
             </div>
-        </div>
+        </PageAnimator>
     );
 }

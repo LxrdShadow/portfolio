@@ -1,4 +1,6 @@
 "use client";
+import { AnimatePresence } from "framer-motion";
+
 import Header from "@/components/Header";
 import "@/styles/stars.css";
 
@@ -18,7 +20,7 @@ export default function AppLayout({
             <Header />
             <main>
                 <section className="grid grid-rows-1 items-center justify-items-center h-full px-8 gap-16 sm:px-20 lg:px-40 font-[family-name:var(--font-jetbrains-mono)] dark:text-white">
-                    {children}
+                    <AnimatePresence mode="wait">{children}</AnimatePresence>
                 </section>
             </main>
             <footer className="p-4 text-center text-sm text-gray-400">
