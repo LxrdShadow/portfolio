@@ -1,6 +1,8 @@
 "use client";
 
+import Loader from "@/components/Loader";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 const containerVariants = {
     hidden: {},
@@ -34,6 +36,15 @@ const PageAnimator = ({
         className:
             "flex-1 flex flex-col items-center justify-center text-center space-y-8",
     };
+    const [hasMounted, setHasMounted] = useState(false);
+
+    useEffect(() => {
+        setHasMounted(true);
+    }, []);
+
+    if (!hasMounted) {
+        return <Loader />;
+    }
 
     return <motion.div {...divAttributes}>{children}</motion.div>;
 };

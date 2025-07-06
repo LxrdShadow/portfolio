@@ -116,3 +116,15 @@ body {
         translate: 0 0;
     }
 }
+
+@keyframes twinkle {
+    0%,
+    100% {
+        opacity: 0.7;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.4) rotate(5deg);
+    }
+}
