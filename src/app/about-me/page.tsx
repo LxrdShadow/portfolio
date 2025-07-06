@@ -1,5 +1,7 @@
+import PageAnimator from "@/layout/PageAnimator";
+
 const AboutMe = () => {
-    return <div>About me</div>;
+    return <PageAnimator>About me</PageAnimator>;
 };
 
 export default AboutMe;

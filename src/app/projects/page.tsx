@@ -1,5 +1,7 @@
+import PageAnimator from "@/layout/PageAnimator";
+
 const Projects = () => {
-    return <div>Projects</div>;
+    return <PageAnimator>Projects</PageAnimator>;
 };
 
 export default Projects;
