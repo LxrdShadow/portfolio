@@ -1,0 +1,46 @@
+[
+    {
+        "title": "Rhytmiq",
+        "description": "Rhytmiq is a lightweight, modern music player application built with Python and Textual.",
+        "tech": ["Python", "Textual", "Pygame"],
+        "link": "https://github.com/LxrdShadow/rhytmiq",
+        "imageSrc": "/rhytmiq-preview.jpg"
+    },
+    {
+        "title": "Linker",
+        "description": "A fast and efficient terminal-based file transfer utility written in Go with no external libraries used.",
+        "tech": ["Go"],
+        "link": "https://github.com/LxrdShadow/linker",
+        "imageSrc": "/linker-preview.jpg"
+    },
+    {
+        "title": "Portfolio",
+        "description": "My minimalist Next.js portfolio — built with Tailwind, caffeine, and a pinch of self-doubt.",
+        "tech": ["Next.js", "Tailwind", "Framer Motion", "Lucide React"],
+        "link": "https://github.com/LxrdShadow/portfolio",
+        "imageSrc": "/portfolio-preview.jpg"
+    },
+    {
+        "title": "Yume",
+        "description": "A command line tool to download manga and manhwa chapters into PDFs.",
+        "tech": ["Python", "BeautifulSoup4", "Colorama", "Pillow", "Reportlab"],
+        "link": "https://github.com/LxrdShadow/yume",
+        "imageSrc": "/yume-preview.png"
+    },
+    {
+        "title": "LinkedOut",
+        "description": "A mobile app that simulates job interviews and gives AI-powered feedback.",
+        "tech": [
+            "Python",
+            "FastAPI",
+            "SQLAlchemy",
+            "PostgreSQL",
+            "JWT",
+            "React Native (Expo)",
+            "Typescript",
+            "OpenAI API"
+        ],
+        "link": "https://github.com/LxrdShadow/linkedout",
+        "imageSrc": "/linkedout-logo.png"
+    }
+]
