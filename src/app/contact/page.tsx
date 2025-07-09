@@ -137,7 +137,7 @@ export default function ContactPage() {
                     />
                     <motion.button
                         type="submit"
-                        className="w-full px-8 py-3 cursor-pointer bg-gradient-to-tr from-accent-1 to-accent animate-gradient-rotate text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900 transition-all duration-300 ease-in-out transform hover:scale-105 active:scale-95"
+                        className="w-full px-8 py-3 cursor-pointer bg-gradient-to-tr from-accent to-accent-1 animate-gradient-rotate text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900 transition-all duration-300 ease-in-out transform hover:scale-105 active:scale-95"
                         variants={itemVariants}
                         whileTap={{ scale: 0.98 }}
                     >

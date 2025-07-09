@@ -15,7 +15,7 @@ body {
 
 .animate-gradient-rotate {
     background-size: 200% 200%;
-    animation: rotate-gradient 1.5s ease infinite;
+    animation: rotate-gradient 1s ease infinite;
 }
 
 @theme {
