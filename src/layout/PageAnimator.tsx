@@ -16,10 +16,10 @@ const containerVariants = {
 const PageAnimator = ({
     children,
     animateElements = false,
-}: Readonly<{
+}: {
     children: React.ReactNode;
     animateElements?: boolean;
-}>) => {
+}) => {
     const divAttributes = {
         exit: { opacity: 0, y: -10 },
         transition: { duration: 0.4 },
