@@ -4,6 +4,7 @@
 
 :root {
     --accent-color: #00bcff;
+    --accent-color-dark: #00bccc;
     --accent-color-1: #05df72;
     --star-color: #00786fcc;
 }
@@ -28,6 +29,7 @@ body {
 
     --color-accent: var(--accent-color);
     --color-accent-1: var(--accent-color-1);
+    --color-accent-dark: var(--accent-color-dark);
 }
 
 @keyframes rotate-gradient {

@@ -49,7 +49,7 @@ const ModalNavBar = ({ isOpen = true, setOpen, className = "" }: Props) => {
             >
                 <div
                     ref={selectRef}
-                    className={`scale-90 flex flex-col justify-center gap-4 w-max rounded-lg bg-bck-light dark:bg-bck-dark shadow-sm p-4 border border-stone-200 dark:border-accent overflow-hidden ${className}`}
+                    className={`scale-90 flex flex-col justify-center gap-4 w-max rounded-lg bg-bck-light dark:bg-bck-dark shadow-sm p-4 border border-accent overflow-hidden ${className}`}
                 >
                     <NavLink title="Home" icon={<Home />} href="/" />
                     <NavLink
