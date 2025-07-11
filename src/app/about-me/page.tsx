@@ -12,7 +12,6 @@ const skills = [
     "Framer Motion",
     "Linux",
     "SQL",
-    "Docker",
 ];
 
 const interests = [
@@ -23,7 +22,6 @@ const interests = [
     "Offline apps",
     "Space aesthetics",
     "Open Source",
-    "Functional Programming",
     "Productivity Tools",
 ];
 
@@ -32,18 +30,19 @@ const educationData = [
         year: "2024 - Present",
         title: "3rd year in Computer Science",
         description:
-            "Deep diving into advanced web technologies and cybersecurity. Prepairing for the Bachelor's Degree",
+            "Deep diving into advanced web technologies and cybersecurity. Explored programming concepts and fostered a problem-solving mindset. Prepairing for the Bachelor's Degree",
     },
     {
         year: "2023 - 2024",
         title: "2nd year in Computer Science",
         description:
-            "Going deeper in the programming, networking and cybersecurity rabbit hole.",
+            "Going deeper in the programming, networking and cybersecurity rabbit hole. Igniting a fervent interest in software development.",
     },
     {
         year: "2022 - 2023",
         title: "1st year in Computer Science",
-        description: "Computer science basics and funcamentals.",
+        description:
+            "Computer science basics and funcamentals, cementing a strong foundation.",
     },
 ];
 
