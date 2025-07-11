@@ -2,71 +2,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
-const containerVariants = {
-    show: {
-        opacity: 1,
-        transition: {
-            staggerChildren: 0.1,
-            delayChildren: 0.1,
-        },
-    },
-} as const;
-
-const sectionVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-        opacity: 1,
-        y: 0,
-        transition: {
-            type: "spring",
-            stiffness: 70,
-            damping: 10,
-            staggerChildren: 0.1,
-            delayChildren: 0.1,
-        },
-    },
-} as const;
-
-const listItemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-        opacity: 1,
-        y: 0,
-        transition: {
-            type: "spring",
-            stiffness: 120,
-            damping: 12,
-        },
-    },
-} as const;
-
-const timelineDotVariants = {
-    hidden: { scale: 0, opacity: 0 },
-    visible: {
-        scale: 1,
-        opacity: 1,
-        transition: {
-            type: "spring",
-            stiffness: 200,
-            damping: 10,
-            delay: 0.2,
-        },
-    },
-} as const;
-
-const timelineLineVariants = {
-    hidden: { scaleY: 0, opacity: 0 },
-    visible: {
-        scaleY: 1,
-        opacity: 1,
-        transition: {
-            duration: 0.6,
-            ease: "easeOut",
-            delay: 0.1,
-        },
-    },
-} as const;
-
 const skills = [
     "Next.js",
     "TailwindCSS",
@@ -94,18 +29,26 @@ const interests = [
 
 const educationData = [
     {
-        year: "2023 - Present",
-        title: "Computer Science Undergraduate",
+        year: "2024 - Present",
+        title: "3rd year in Computer Science",
         description:
-            "Pursuing a BSc in Computer Science. Deep diving into advanced web technologies, AI/ML, and cybersecurity fundamentals. Actively contributing to open-source projects and fostering collaborative learning.",
+            "Deep diving into advanced web technologies and cybersecurity. Prepairing for the Bachelor's Degree",
     },
     {
-        year: "2020 - 2023",
-        title: "High School Graduation",
+        year: "2023 - 2024",
+        title: "2nd year in Computer Science",
         description:
-            "Graduated with honors, cementing a strong foundation in STEM and igniting a fervent interest in software development. Explored early programming concepts and fostered a problem-solving mindset.",
+            "Going deeper in the programming, networking and cybersecurity rabbit hole.",
+    },
+    {
+        year: "2022 - 2023",
+        title: "1st year in Computer Science",
+        description: "Computer science basics and funcamentals.",
     },
 ];
+
+const str =
+    "Graduated with honors, cementing a strong foundation in STEM and igniting a fervent interest in software development. Explored early programming concepts and fostered a problem-solving mindset.";
 
 export default function AboutMe() {
     const educationRef = useRef(null);
@@ -183,7 +126,7 @@ export default function AboutMe() {
                     🎓 Education & Journey
                 </motion.h2>
 
-                <div className="relative border-l-2 border-gray-200 dark:border-gray-700 pl-6 sm:ml-8 space-y-12">
+                <div className="relative border-l-2 border-gray-300 dark:border-gray-700 pl-6 sm:ml-8 space-y-12">
                     <motion.div
                         className="absolute left-[calc(1.5rem-1px)] sm:left-[calc(2rem-1px)] top-0 bottom-0 w-0.5 bg-gradient-to-b from-transparent via-blue-500 to-transparent dark:via-blue-400"
                         variants={timelineLineVariants}
@@ -196,7 +139,7 @@ export default function AboutMe() {
                             variants={listItemVariants}
                         >
                             <motion.div
-                                className="absolute w-4 h-4 bg-blue-500 dark:bg-blue-400 rounded-full left-[-30px] sm:left-[-38px] top-1.5 ring-4 ring-white dark:ring-gray-900 z-10"
+                                className="absolute w-4 h-4 bg-blue-500 dark:bg-blue-400 rounded-full left-[-30px] sm:left-[-34px] top-1.5 ring-4 ring-white dark:ring-gray-900 z-10"
                                 variants={timelineDotVariants}
                             />
                             <div className="text-left ml-10">
@@ -311,8 +254,8 @@ export default function AboutMe() {
                         creation
                     </span>{" "}
                     truly makes me feel alive in a world that can often feel
-                    numb. For me, there's a profound beauty in code—not just in
-                    its functionality, but in its{" "}
+                    numb. For me, there&apos;s a profound beauty in code—not
+                    just in its functionality, but in its{" "}
                     <span className="font-semibold text-blue-500 dark:text-blue-400">
                         elegance
                     </span>{" "}
@@ -326,3 +269,68 @@ export default function AboutMe() {
         </div>
     );
 }
+
+const containerVariants = {
+    show: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.1,
+            delayChildren: 0.1,
+        },
+    },
+} as const;
+
+const sectionVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            type: "spring",
+            stiffness: 70,
+            damping: 10,
+            staggerChildren: 0.1,
+            delayChildren: 0.1,
+        },
+    },
+} as const;
+
+const listItemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            type: "spring",
+            stiffness: 120,
+            damping: 12,
+        },
+    },
+} as const;
+
+const timelineDotVariants = {
+    hidden: { scale: 0, opacity: 0 },
+    visible: {
+        scale: 1,
+        opacity: 1,
+        transition: {
+            type: "spring",
+            stiffness: 200,
+            damping: 10,
+            delay: 0.2,
+        },
+    },
+} as const;
+
+const timelineLineVariants = {
+    hidden: { scaleY: 0, opacity: 0 },
+    visible: {
+        scaleY: 1,
+        opacity: 1,
+        transition: {
+            duration: 0.6,
+            ease: "easeOut",
+            delay: 0.1,
+        },
+    },
+} as const;
