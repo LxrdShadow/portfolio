@@ -4,26 +4,18 @@ import { useRef } from "react";
 
 const skills = [
     "Next.js",
-    "TailwindCSS",
-    "Python",
-    "FastAPI",
+    "TypeScript/JavaScript",
     "React",
+    "Node.js",
+    "Python",
+    "Go",
+    "TailwindCSS",
     "Git",
-    "Framer Motion",
-    "Linux",
+    "FastAPI",
     "SQL",
 ];
 
-const interests = [
-    "AI & LLMs",
-    "Cybersecurity",
-    "CLI tools",
-    "Minimal UI",
-    "Offline apps",
-    "Space aesthetics",
-    "Open Source",
-    "Productivity Tools",
-];
+const interests = ["AI & LLMs", "Video games", "Reading", "Music", "Chess"];
 
 const educationData = [
     {
@@ -66,6 +58,26 @@ export default function AboutMe() {
     const isInterestsInView = useInView(interestsRef, viewConfig);
     const isOtherInView = useInView(otherRef, viewConfig);
 
+    // Helper function to get skill level for categorized list
+    const getSkillLevel = (skill: string) => {
+        switch (skill) {
+            case "Next.js":
+            case "React":
+            case "Node.js":
+            case "TailwindCSS":
+            case "Python":
+            case "TypeScript/JavaScript":
+            case "Git":
+            case "FastAPI":
+                return { label: "Proficient", color: "text-green-500" };
+            case "Go":
+            case "SQL":
+                return { label: "Experienced", color: "text-yellow-500" };
+            default:
+                return { label: "Familiar", color: "text-gray-500" };
+        }
+    };
+
     return (
         <div className="space-y-16 lg:space-y-24 max-w-4xl mx-auto py-12 px-4">
             {/* About Me Section */}
@@ -77,15 +89,27 @@ export default function AboutMe() {
             >
                 <motion.h1
                     className="text-4xl sm:text-5xl font-extrabold text-gray-900 dark:text-gray-50 mb-6"
-                    variants={listItemVariants}
+                    variants={itemVariants}
                 >
                     About Me
                 </motion.h1>
                 <motion.p
                     className="text-lg leading-relaxed max-w-3xl mx-auto sm:mx-0 text-gray-700 dark:text-gray-300"
-                    variants={listItemVariants}
+                    variants={itemVariants}
                 >
-                    I&apos;m a{" "}
+                    My name is{" "}
+                    <span className="font-semibold text-blue-500 dark:text-blue-400">
+                        Idealilalaina ANDRITIANA
+                    </span>{" "}
+                    , you can call me{" "}
+                    <span className="font-semibold text-blue-500 dark:text-blue-400">
+                        Idealy
+                    </span>{" "}
+                    , and online I sometimes go by{" "}
+                    <span className="font-semibold text-blue-500 dark:text-blue-400">
+                        Shadow
+                    </span>
+                    . I&apos;m 20 Years old. I&apos;m a{" "}
                     <span className="font-semibold text-blue-500 dark:text-blue-400">
                         Computer Science student
                     </span>{" "}
@@ -120,7 +144,7 @@ export default function AboutMe() {
             >
                 <motion.h2
                     className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-gray-50 mb-8 text-center sm:text-left"
-                    variants={listItemVariants}
+                    variants={itemVariants}
                 >
                     🎓 Education & Journey
                 </motion.h2>
@@ -135,7 +159,7 @@ export default function AboutMe() {
                         <motion.div
                             key={idx}
                             className="relative"
-                            variants={listItemVariants}
+                            variants={itemVariants}
                         >
                             <motion.div
                                 className="absolute w-4 h-4 bg-blue-500 dark:bg-blue-400 rounded-full left-[-30px] sm:left-[-34px] top-1.5 ring-4 ring-white dark:ring-gray-900 z-10"
@@ -163,28 +187,172 @@ export default function AboutMe() {
                 variants={sectionVariants}
                 initial="hidden"
                 animate={isSkillsInView ? "visible" : "hidden"}
-                className="px-4 sm:px-0 min-h-[50vh] flex flex-col justify-center"
+                className="relative px-4 sm:px-0 min-h-[50vh]"
             >
                 <motion.h2
-                    className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-gray-50 mb-6 text-center sm:text-left"
-                    variants={listItemVariants}
+                    className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-gray-50 mb-8 text-center sm:text-left"
+                    variants={itemVariants}
                 >
-                    🛠️ Skills
+                    🛠️ My Skills & Expertise
                 </motion.h2>
-                <motion.ul
-                    className="flex flex-wrap gap-3 justify-center sm:justify-start"
+
+                {/* 1. Featured Skills with Contextual Descriptions */}
+                <motion.div
+                    className="space-y-8 mb-12"
+                    variants={containerVariants} // Stagger these descriptions
+                >
+                    <motion.div variants={itemVariants}>
+                        <h3 className="text-xl font-bold text-blue-600 dark:text-blue-400 mb-2">
+                            Next.js & React
+                        </h3>
+                        <p className="text-gray-700 dark:text-gray-300">
+                            Building modern and performant web applications.
+                        </p>
+                    </motion.div>
+
+                    <motion.div variants={itemVariants}>
+                        <h3 className="text-xl font-bold text-blue-600 dark:text-blue-400 mb-2">
+                            FastAPI & Node.js
+                        </h3>
+                        <p className="text-gray-700 dark:text-gray-300">
+                            Developing robust and scalable backend APIs for web
+                            services.
+                        </p>
+                    </motion.div>
+
+                    <motion.div variants={itemVariants}>
+                        <h3 className="text-xl font-bold text-blue-600 dark:text-blue-400 mb-2">
+                            Tailwind CSS
+                        </h3>
+                        <p className="text-gray-700 dark:text-gray-300">
+                            Crafting beautiful, responsive, and highly
+                            customizable user interfaces.
+                        </p>
+                    </motion.div>
+
+                    <motion.div variants={itemVariants}>
+                        <h3 className="text-xl font-bold text-blue-600 dark:text-blue-400 mb-2">
+                            Git
+                        </h3>
+                        <p className="text-gray-700 dark:text-gray-300">
+                            Managing complex codebases and collaborating
+                            effectively in team environments.
+                        </p>
+                    </motion.div>
+                </motion.div>
+
+                {/* 2. Categorized Skills with Experience Markers */}
+                <motion.h3
+                    className="text-2xl font-semibold text-gray-800 dark:text-gray-100 mb-6 mt-12 text-center sm:text-left"
+                    variants={itemVariants}
+                >
+                    My Technical Stack
+                </motion.h3>
+                <motion.div
+                    className="grid grid-cols-1 md:grid-cols-2 gap-8"
                     variants={containerVariants}
                 >
-                    {skills.map((skill, i) => (
-                        <motion.li
-                            key={i}
-                            className="px-4 py-1.5 rounded-full text-sm font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 border border-blue-200 dark:border-blue-700 shadow-sm"
-                            variants={listItemVariants}
-                        >
-                            {skill}
-                        </motion.li>
-                    ))}
-                </motion.ul>
+                    <motion.div variants={itemVariants}>
+                        <h4 className="text-xl font-bold mb-3 text-blue-600 dark:text-blue-400">
+                            Languages & Databases
+                        </h4>
+                        <ul className="space-y-2">
+                            {skills
+                                .filter((s) =>
+                                    [
+                                        "Python",
+                                        "SQL",
+                                        "Go",
+                                        "TypeScript/JavaScript",
+                                    ].includes(s),
+                                )
+                                .map((skill, i) => {
+                                    const { label, color } =
+                                        getSkillLevel(skill);
+                                    return (
+                                        <motion.li
+                                            key={i}
+                                            className="flex items-center text-gray-700 dark:text-gray-300"
+                                            variants={itemVariants}
+                                        >
+                                            <span className={`${color} mr-2`}>
+                                                ●
+                                            </span>{" "}
+                                            <strong>{skill}</strong>: {label}
+                                        </motion.li>
+                                    );
+                                })}
+                        </ul>
+                    </motion.div>
+
+                    <motion.div variants={itemVariants}>
+                        <h4 className="text-xl font-bold mb-3 text-blue-600 dark:text-blue-400">
+                            Frameworks & Libraries
+                        </h4>
+                        <ul className="space-y-2">
+                            {skills
+                                .filter((s) =>
+                                    [
+                                        "Next.js",
+                                        "React",
+                                        "TailwindCSS",
+                                        "FastAPI",
+                                        "Node.js",
+                                    ].includes(s),
+                                )
+                                .map((skill, i) => {
+                                    const { label, color } =
+                                        getSkillLevel(skill);
+                                    return (
+                                        <motion.li
+                                            key={i}
+                                            className="flex items-center text-gray-700 dark:text-gray-300"
+                                            variants={itemVariants}
+                                        >
+                                            <span className={`${color} mr-2`}>
+                                                ●
+                                            </span>{" "}
+                                            <strong>{skill}</strong>: {label}
+                                        </motion.li>
+                                    );
+                                })}
+                        </ul>
+                    </motion.div>
+
+                    <motion.div variants={itemVariants}>
+                        <h4 className="text-xl font-bold mb-3 text-blue-600 dark:text-blue-400">
+                            Tools & Methodologies
+                        </h4>
+                        <ul className="space-y-2">
+                            {skills
+                                .filter((s) => ["Git"].includes(s))
+                                .map((skill, i) => {
+                                    const { label, color } =
+                                        getSkillLevel(skill);
+                                    return (
+                                        <motion.li
+                                            key={i}
+                                            className="flex items-center text-gray-700 dark:text-gray-300"
+                                            variants={itemVariants}
+                                        >
+                                            <span className={`${color} mr-2`}>
+                                                ●
+                                            </span>{" "}
+                                            <strong>{skill}</strong>: {label}
+                                        </motion.li>
+                                    );
+                                })}
+                            {/* Add Linux and Docker explicitly if they are part of your broader skills */}
+                            <motion.li
+                                className="flex items-center text-gray-700 dark:text-gray-300"
+                                variants={itemVariants}
+                            >
+                                <span className="text-yellow-500 mr-2">●</span>{" "}
+                                <strong>Linux</strong>: Experienced
+                            </motion.li>
+                        </ul>
+                    </motion.div>
+                </motion.div>
             </motion.section>
 
             {/* Interests Section */}
@@ -197,7 +365,7 @@ export default function AboutMe() {
             >
                 <motion.h2
                     className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-gray-50 mb-6 text-center sm:text-left"
-                    variants={listItemVariants}
+                    variants={itemVariants}
                 >
                     💡 Interests
                 </motion.h2>
@@ -209,7 +377,7 @@ export default function AboutMe() {
                         <motion.li
                             key={i}
                             className="px-4 py-1.5 rounded-full text-sm font-medium bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 border border-purple-200 dark:border-purple-700 shadow-sm"
-                            variants={listItemVariants}
+                            variants={itemVariants}
                         >
                             {item}
                         </motion.li>
@@ -227,13 +395,13 @@ export default function AboutMe() {
             >
                 <motion.h2
                     className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-gray-50 mb-6"
-                    variants={listItemVariants}
+                    variants={itemVariants}
                 >
                     ✨ My Philosophy
                 </motion.h2>
                 <motion.p
                     className="text-lg text-gray-700 dark:text-gray-300 max-w-xl mx-auto sm:mx-0 leading-relaxed"
-                    variants={listItemVariants}
+                    variants={itemVariants}
                 >
                     I believe in{" "}
                     <span className="font-semibold text-blue-500 dark:text-blue-400">
@@ -294,7 +462,7 @@ const sectionVariants = {
     },
 } as const;
 
-const listItemVariants = {
+const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
         opacity: 1,
