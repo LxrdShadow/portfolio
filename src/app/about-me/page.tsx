@@ -38,8 +38,8 @@ const educationData = [
     },
 ];
 
-const str =
-    "Graduated with honors, cementing a strong foundation in STEM and igniting a fervent interest in software development. Explored early programming concepts and fostered a problem-solving mindset.";
+// const str =
+//     "Graduated with honors, cementing a strong foundation in STEM and igniting a fervent interest in software development. Explored early programming concepts and fostered a problem-solving mindset.";
 
 export default function AboutMe() {
     const educationRef = useRef(null);
