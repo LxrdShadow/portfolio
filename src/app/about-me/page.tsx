@@ -100,11 +100,11 @@ export default function AboutMe() {
                     My name is{" "}
                     <span className="font-semibold text-blue-500 dark:text-blue-400">
                         Idealilalaina ANDRITIANA
-                    </span>{" "}
+                    </span>
                     , you can call me{" "}
                     <span className="font-semibold text-blue-500 dark:text-blue-400">
                         Idealy
-                    </span>{" "}
+                    </span>
                     , and online I sometimes go by{" "}
                     <span className="font-semibold text-blue-500 dark:text-blue-400">
                         Shadow
@@ -113,12 +113,14 @@ export default function AboutMe() {
                     <span className="font-semibold text-blue-500 dark:text-blue-400">
                         Computer Science student
                     </span>{" "}
-                    who thrives on bringing ideas to life through code. My
-                    journey often feels like navigating a thrilling maze, where
-                    passion and the occasional burnout dance a fine line.
-                    I&apos;m obsessed with{" "}
+                    who finds strange comfort in organized chaos. I like
+                    building simple, functional things from{" "}
                     <span className="font-semibold text-blue-500 dark:text-blue-400">
-                        crafting intuitive interfaces
+                        user interfaces
+                    </span>{" "}
+                    to{" "}
+                    <span className="font-semibold text-blue-500 dark:text-blue-400">
+                        backend systems
                     </span>
                     , building robust systems from the ground up, and sometimes,
                     just staring at my terminal contemplating the universe (and
@@ -126,11 +128,16 @@ export default function AboutMe() {
                     <span className="font-semibold text-blue-500 dark:text-blue-400">
                         minimalism
                     </span>{" "}
-                    in both design and lifestyle, and I confess to an{" "}
+                    , and I may or may not have an{" "}
                     <span className="font-semibold text-blue-500 dark:text-blue-400">
                         unhealthy obsession with clean folder structures
                     </span>{" "}
-                    and perfectly formatted code.
+                    and perfectly formatted code. Between the bugs and burnout,
+                    coding still feels like the one place where things might{" "}
+                    <span className="font-semibold text-blue-500 dark:text-blue-400">
+                        make sense
+                    </span>{" "}
+                    and that&apos;s why I keep going.
                 </motion.p>
             </motion.section>
 
