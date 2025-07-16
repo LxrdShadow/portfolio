@@ -8,11 +8,12 @@ const skills = [
     "React",
     "Node.js",
     "Python",
-    "Go",
     "TailwindCSS",
     "Git",
     "FastAPI",
-    "SQL",
+    "PostgreSQL",
+    "MySQL",
+    "Go",
 ];
 
 const interests = ["AI & LLMs", "Video games", "Reading", "Music", "Chess"];
@@ -69,10 +70,11 @@ export default function AboutMe() {
             case "TypeScript/JavaScript":
             case "Git":
             case "FastAPI":
+            case "PostgreSQL":
+            case "MySQL":
                 return { label: "Proficient", color: "text-green-500" };
             case "Go":
-            case "SQL":
-                return { label: "Experienced", color: "text-yellow-500" };
+                return { label: "Experienced", color: "text-yellow-300" };
             default:
                 return { label: "Familiar", color: "text-gray-500" };
         }
@@ -268,9 +270,10 @@ export default function AboutMe() {
                                 .filter((s) =>
                                     [
                                         "Python",
-                                        "SQL",
                                         "Go",
                                         "TypeScript/JavaScript",
+                                        "PostgreSQL",
+                                        "MySQL",
                                     ].includes(s),
                                 )
                                 .map((skill, i) => {
@@ -354,7 +357,7 @@ export default function AboutMe() {
                                 className="flex items-center text-gray-700 dark:text-gray-300"
                                 variants={itemVariants}
                             >
-                                <span className="text-yellow-500 mr-2">●</span>{" "}
+                                <span className="text-yellow-300 mr-2">●</span>{" "}
                                 <strong>Linux</strong>: Experienced
                             </motion.li>
                         </ul>
