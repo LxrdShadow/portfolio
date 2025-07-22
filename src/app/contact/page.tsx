@@ -168,7 +168,7 @@ export default function ContactPage() {
                         />
                     </Link>
                     <Link
-                        href="https://www.instagram.com/andritiana_idealy/"
+                        href="https://www.instagram.com/lxrd_shadoww?igsh=YWlyZ2hlNzNyYmVj"
                         target="_blank"
                     >
                         <Image
