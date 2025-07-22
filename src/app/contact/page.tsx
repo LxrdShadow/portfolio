@@ -6,6 +6,7 @@ import React from "react";
 
 import PageAnimator from "@/layout/PageAnimator";
 import Image from "next/image";
+import { Phone } from "lucide-react";
 
 const containerVariants = {
     hidden: { opacity: 0 },
@@ -149,34 +150,49 @@ export default function ContactPage() {
 
             {/* Social links */}
             <motion.div
-                className="w-full max-w-md flex justify-center items-center gap-5"
+                className="w-full max-w-md flex-col items-center gap-5"
                 variants={itemVariants}
                 initial="hidden"
                 animate="show"
             >
-                <Link href="https://www.facebook.com/profile.php?id=100063562573268" target="_blank">
-                    <Image
-                        src="/svg/facebook.svg"
-                        alt="facebook-icon"
-                        width={50}
-                        height={50}
-                    />
-                </Link>
-                <Link href="https://www.linkedin.com/in/andritiana-idealy-4b6428320" target="_blank">
-                    <Image
-                        src="/svg/linkedin.svg"
-                        alt="linkedin-icon"
-                        width={50}
-                        height={50}
-                    />
-                </Link>
-                <Link href="https://wa.me/261340161792" target="_blank">
-                    <Image
-                        src="/svg/whatsapp.svg"
-                        alt="whatsapp-icon"
-                        width={50}
-                        height={50}
-                    />
+                <div className="flex justify-center items-center gap-5">
+                    <Link
+                        href="https://www.facebook.com/profile.php?id=100063562573268"
+                        target="_blank"
+                    >
+                        <Image
+                            src="/svg/facebook.svg"
+                            alt="facebook-icon"
+                            width={50}
+                            height={50}
+                        />
+                    </Link>
+                    <Link
+                        href="https://www.linkedin.com/in/andritiana-idealy-4b6428320"
+                        target="_blank"
+                    >
+                        <Image
+                            src="/svg/linkedin.svg"
+                            alt="linkedin-icon"
+                            width={50}
+                            height={50}
+                        />
+                    </Link>
+                    <Link href="https://wa.me/261340161792" target="_blank">
+                        <Image
+                            src="/svg/whatsapp.svg"
+                            alt="whatsapp-icon"
+                            width={50}
+                            height={50}
+                        />
+                    </Link>
+                </div>
+                <Link
+                    className="mt-5 flex justify-center items-center gap-3 cursor-pointer"
+                    href="tel:+261340161792"
+                >
+                    <Phone size={16} />
+                    <p className="text-sm">+261 34 01 617 92</p>
                 </Link>
             </motion.div>
         </PageAnimator>
