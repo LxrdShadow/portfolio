@@ -168,6 +168,17 @@ export default function ContactPage() {
                         />
                     </Link>
                     <Link
+                        href="https://www.instagram.com/andritiana_idealy/"
+                        target="_blank"
+                    >
+                        <Image
+                            src="/svg/instagram.svg"
+                            alt="instagram-icon"
+                            width={50}
+                            height={50}
+                        />
+                    </Link>
+                    <Link
                         href="https://www.linkedin.com/in/andritiana-idealy-4b6428320"
                         target="_blank"
                     >
