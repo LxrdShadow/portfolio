@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import React from "react";
 
 import PageAnimator from "@/layout/PageAnimator";
+import Image from "next/image";
 
 const containerVariants = {
     hidden: { opacity: 0 },
@@ -144,6 +145,36 @@ export default function ContactPage() {
                         Send Message
                     </motion.button>
                 </form>
+            </motion.div>
+
+            {/* Social links */}
+            <motion.div
+                className="w-full max-w-md flex justify-center items-center gap-5"
+                variants={containerVariants}
+                initial="hidden"
+                animate="show"
+            >
+                <Image
+                    src="/svg/facebook.svg"
+                    alt="facebook-icon"
+                    className="cursor-pointer"
+                    width={50}
+                    height={50}
+                />
+                <Image
+                    src="/svg/linkedin.svg"
+                    alt="linkedin-icon"
+                    className="cursor-pointer"
+                    width={50}
+                    height={50}
+                />
+                <Image
+                    src="/svg/whatsapp.svg"
+                    alt="whatsapp-icon"
+                    className="cursor-pointer"
+                    width={50}
+                    height={50}
+                />
             </motion.div>
         </PageAnimator>
     );
