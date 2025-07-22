@@ -150,31 +150,34 @@ export default function ContactPage() {
             {/* Social links */}
             <motion.div
                 className="w-full max-w-md flex justify-center items-center gap-5"
-                variants={containerVariants}
+                variants={itemVariants}
                 initial="hidden"
                 animate="show"
             >
-                <Image
-                    src="/svg/facebook.svg"
-                    alt="facebook-icon"
-                    className="cursor-pointer"
-                    width={50}
-                    height={50}
-                />
-                <Image
-                    src="/svg/linkedin.svg"
-                    alt="linkedin-icon"
-                    className="cursor-pointer"
-                    width={50}
-                    height={50}
-                />
-                <Image
-                    src="/svg/whatsapp.svg"
-                    alt="whatsapp-icon"
-                    className="cursor-pointer"
-                    width={50}
-                    height={50}
-                />
+                <Link href="https://www.facebook.com/profile.php?id=100063562573268" target="_blank">
+                    <Image
+                        src="/svg/facebook.svg"
+                        alt="facebook-icon"
+                        width={50}
+                        height={50}
+                    />
+                </Link>
+                <Link href="https://www.linkedin.com/in/andritiana-idealy-4b6428320" target="_blank">
+                    <Image
+                        src="/svg/linkedin.svg"
+                        alt="linkedin-icon"
+                        width={50}
+                        height={50}
+                    />
+                </Link>
+                <Link href="https://wa.me/261340161792" target="_blank">
+                    <Image
+                        src="/svg/whatsapp.svg"
+                        alt="whatsapp-icon"
+                        width={50}
+                        height={50}
+                    />
+                </Link>
             </motion.div>
         </PageAnimator>
     );
