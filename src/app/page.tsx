@@ -67,8 +67,9 @@ export default function Home() {
                 className="text-lg max-w-xl mx-auto dark:text-gray-300 text-gray-600"
             >
                 CS student with a love-hate relationship with semicolons and
-                life itself. Passionate about web tech, machine learning,
-                security, and doing cool stuff with code.
+                life itself. I&apos;m a Full-stack developer passionate about
+                web tech, machine learning, security, and doing cool stuff with
+                code.
             </motion.p>
 
             <motion.div
