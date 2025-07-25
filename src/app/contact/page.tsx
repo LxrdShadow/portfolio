@@ -3,17 +3,16 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import React from "react";
+import { useForm, ValidationError } from "@formspree/react";
 
 import PageAnimator from "@/layout/PageAnimator";
+import Loader from "@/components/Loader";
 
 const containerVariants = {
     hidden: { opacity: 0 },
     show: {
         opacity: 1,
-        transition: {
-            staggerChildren: 0.1,
-            delayChildren: 0.2,
-        },
+        transition: { staggerChildren: 0.1, delayChildren: 0.2 },
     },
 } as const;
 
@@ -23,13 +22,7 @@ const itemVariants = {
 } as const;
 
 export default function ContactPage() {
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        // alert(
-        //     "Thanks for your message! This form is a placeholder, but I appreciate you trying to connect. 🖤",
-        // );
-        // TODO: Send the data by email
-    };
+    const [state, handleSubmit] = useForm("meozgzow"); // your Formspree form ID
 
     return (
         <PageAnimator animateElements>
@@ -53,6 +46,7 @@ export default function ContactPage() {
                 software development, I&apos;m eager to hear from you.
             </motion.p>
 
+            {/* Buttons */}
             <motion.div
                 className="flex flex-wrap justify-center gap-4 sm:gap-6 w-full max-w-lg"
                 variants={containerVariants}
@@ -64,6 +58,7 @@ export default function ContactPage() {
                         href="mailto:andritiana.idealy@gmail.com"
                         className="flex items-center justify-center px-6 py-3 border border-accent text-accent rounded-full hover:bg-accent-dark hover:text-txt-light dark:hover:bg-accent-dark dark:hover:text-txt-light transition-all duration-300 ease-in-out font-medium shadow-md hover:shadow-lg"
                     >
+                        {/* Email Icon */}
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="h-5 w-5 mr-2"
@@ -84,6 +79,7 @@ export default function ContactPage() {
                         rel="noopener noreferrer"
                         className="flex items-center justify-center px-6 py-3 border border-txt-light text-txt-light rounded-full hover:bg-bck-dark hover:text-txt-dark dark:border-txt-dark dark:text-txt-dark dark:hover:bg-bck-light dark:hover:text-txt-light transition-all duration-300 ease-in-out font-medium shadow-md hover:shadow-lg"
                     >
+                        {/* GitHub Icon */}
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="h-5 w-5 mr-2"
@@ -114,36 +110,87 @@ export default function ContactPage() {
                 >
                     Or Send a Message
                 </motion.h2>
+
                 <form onSubmit={handleSubmit} className="space-y-4">
                     <motion.input
                         type="text"
+                        name="name"
+                        required
                         placeholder="Your Name"
                         aria-label="Your Name"
                         className="w-full px-5 py-3 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 rounded-lg placeholder-gray-500 dark:placeholder-gray-400 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200"
                         variants={itemVariants}
                     />
+                    <ValidationError
+                        prefix="Name"
+                        field="name"
+                        errors={state.errors}
+                    />
+
                     <motion.input
                         type="email"
+                        name="email"
+                        required
                         placeholder="Your Email"
                         aria-label="Your Email"
                         className="w-full px-5 py-3 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 rounded-lg placeholder-gray-500 dark:placeholder-gray-400 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200"
                         variants={itemVariants}
                     />
+                    <ValidationError
+                        prefix="Email"
+                        field="email"
+                        errors={state.errors}
+                    />
+
                     <motion.textarea
+                        name="message"
+                        required
                         placeholder="Your Message"
                         aria-label="Your Message"
                         className="w-full px-5 py-3 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 rounded-lg placeholder-gray-500 dark:placeholder-gray-400 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-y h-36 transition duration-200"
                         variants={itemVariants}
                     />
+                    <ValidationError
+                        prefix="Message"
+                        field="message"
+                        errors={state.errors}
+                    />
+
                     <motion.button
                         type="submit"
-                        className="w-full px-8 py-3 cursor-pointer bg-gradient-to-tr from-accent to-accent-1 animate-gradient-rotate text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900 transition-all duration-300 ease-in-out transform hover:scale-105 active:scale-95"
+                        disabled={state.submitting}
+                        className="w-full px-8 py-3 cursor-pointer bg-gradient-to-tr from-accent to-accent-1 animate-gradient-rotate text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900 transition-all duration-300 ease-in-out transform hover:scale-105 active:scale-95 flex justify-center items-center"
                         variants={itemVariants}
                         whileTap={{ scale: 0.98 }}
                     >
-                        Send Message
+                        {state.submitting ? (
+                            <Loader variant="simple" size="sm" />
+                        ) : (
+                            "Send Message"
+                        )}
                     </motion.button>
                 </form>
+
+                {state.succeeded && (
+                    <motion.p
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="mt-4 text-accent-1 text-sm font-medium"
+                    >
+                        ✅ Message sent successfully. I’ll get back to you soon!
+                    </motion.p>
+                )}
+
+                {state.errors?.length > 0 && (
+                    <motion.p
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="mt-4 text-red-400 text-sm font-medium"
+                    >
+                        ❌ Something went wrong. Double check your input or try
+                        again later.
+                    </motion.p>
+                )}
             </motion.div>
         </PageAnimator>
     );
