@@ -183,7 +183,7 @@ export default function ContactPage() {
                     </motion.p>
                 )}
 
-                {state.errors?.length > 0 && (
+                {Object.keys(state.errors).length > 0 && (
                     <motion.p
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
