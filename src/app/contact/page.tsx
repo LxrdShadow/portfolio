@@ -204,7 +204,7 @@ export default function ContactPage() {
             >
                 <div className="flex justify-center items-center gap-5">
                     <Link
-                        href="https://www.facebook.com/profile.php?id=100063562573268"
+                        href="https://www.facebook.com/lxrdshadow"
                         target="_blank"
                     >
                         <Image
@@ -215,7 +215,7 @@ export default function ContactPage() {
                         />
                     </Link>
                     <Link
-                        href="https://www.instagram.com/lxrd_shadoww?igsh=YWlyZ2hlNzNyYmVj"
+                        href="https://www.instagram.com/lxrd_shadoww"
                         target="_blank"
                     >
                         <Image
@@ -226,7 +226,7 @@ export default function ContactPage() {
                         />
                     </Link>
                     <Link
-                        href="https://www.linkedin.com/in/andritiana-idealy-4b6428320"
+                        href="https://www.linkedin.com/in/andritiana-idealy"
                         target="_blank"
                     >
                         <Image
