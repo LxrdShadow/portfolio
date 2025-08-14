@@ -123,6 +123,10 @@ export default function AboutMe() {
                     to{" "}
                     <span className="font-semibold text-blue-500 dark:text-blue-400">
                         backend systems
+                    </span>{" "}
+                    and{" "}
+                    <span className="font-semibold text-blue-500 dark:text-blue-400">
+                        CLI tools
                     </span>
                     , building robust systems from the ground up, and sometimes,
                     just staring at my terminal contemplating the universe (and
