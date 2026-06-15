@@ -9,33 +9,43 @@ const skills = [
     "Node.js",
     "Python",
     "TailwindCSS",
-    "Git",
     "FastAPI",
+    "Celery",
+    "Scrapy",
     "PostgreSQL",
     "MySQL",
     "Go",
+    "Git",
+    "Docker",
+    "Linux",
 ];
 
 const interests = ["AI & LLMs", "Video games", "Reading", "Music", "Chess"];
 
 const educationData = [
     {
-        year: "2024 - Present",
-        title: "3rd year in Computer Science",
+        year: "2025 - Present",
+        title: "Master 1 (M1) / 1st year Master in Computer Science",
         description:
-            "Deep diving into advanced web technologies and cybersecurity. Explored programming concepts and fostered a problem-solving mindset. Prepairing for the Bachelor's Degree",
+            "Advanced studies in software engineering, and system design.",
+    },
+    {
+        year: "2024 - 2025",
+        title: "Licence 3 (L3) / 3rd year Bachelor’s in Computer Science",
+        description:
+            "Advanced web technologies, cybersecurity, and project-based development.",
     },
     {
         year: "2023 - 2024",
-        title: "2nd year in Computer Science",
+        title: "Licence 2 (L2) / 2nd year Bachelor’s in Computer Science",
         description:
-            "Going deeper in the programming, networking and cybersecurity rabbit hole. Igniting a fervent interest in software development.",
+            "Programming, networking, and core software development concepts.",
     },
     {
         year: "2022 - 2023",
-        title: "1st year in Computer Science",
+        title: "Licence 1 (L1) / 1st year Bachelor’s in Computer Science",
         description:
-            "Computer science basics and funcamentals, cementing a strong foundation.",
+            "Computer science fundamentals, programming basics, and logic.",
     },
 ];
 
@@ -70,10 +80,14 @@ export default function AboutMe() {
             case "TypeScript/JavaScript":
             case "Git":
             case "FastAPI":
+            case "Celery":
+            case "Scrapy":
             case "PostgreSQL":
             case "MySQL":
                 return { label: "Proficient", color: "text-green-500" };
             case "Go":
+            case "Docker":
+            case "Linux":
                 return { label: "Experienced", color: "text-yellow-300" };
             default:
                 return { label: "Familiar", color: "text-gray-500" };
@@ -111,7 +125,8 @@ export default function AboutMe() {
                     <span className="font-semibold text-blue-500 dark:text-blue-400">
                         Shadow
                     </span>
-                    . I&apos;m 20 Years old. I&apos;m a{" "}
+                    . I&apos;m {new Date(Date.now()).getFullYear() - 2005} Years
+                    old. I&apos;m a{" "}
                     <span className="font-semibold text-blue-500 dark:text-blue-400">
                         Computer Science student
                     </span>{" "}
@@ -312,6 +327,8 @@ export default function AboutMe() {
                                         "TailwindCSS",
                                         "FastAPI",
                                         "Node.js",
+                                        "Celery",
+                                        "Scrapy",
                                     ].includes(s),
                                 )
                                 .map((skill, i) => {
@@ -339,7 +356,9 @@ export default function AboutMe() {
                         </h4>
                         <ul className="space-y-2">
                             {skills
-                                .filter((s) => ["Git"].includes(s))
+                                .filter((s) =>
+                                    ["Git", "Docker", "Linux"].includes(s),
+                                )
                                 .map((skill, i) => {
                                     const { label, color } =
                                         getSkillLevel(skill);
@@ -356,14 +375,6 @@ export default function AboutMe() {
                                         </motion.li>
                                     );
                                 })}
-                            {/* Add Linux and Docker explicitly if they are part of your broader skills */}
-                            <motion.li
-                                className="flex items-center text-gray-700 dark:text-gray-300"
-                                variants={itemVariants}
-                            >
-                                <span className="text-yellow-300 mr-2">●</span>{" "}
-                                <strong>Linux</strong>: Experienced
-                            </motion.li>
                         </ul>
                     </motion.div>
                 </motion.div>
